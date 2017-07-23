@@ -12,6 +12,7 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 /*@ComponentScan(basePackages={"com.tanmoy"})
 @EnableAutoConfiguration*/
 
+//This class is required to create deployable war file
 public class SpringBootWebApplication extends SpringBootServletInitializer{
 
 	@Override
