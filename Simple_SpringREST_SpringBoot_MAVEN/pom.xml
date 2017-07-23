@@ -61,6 +61,8 @@
   
 	<build>
 		<plugins>
+		
+			<!-- to create one executable jar or war file(also called uber-JAR file)that contains all of the application’s dependencies -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
