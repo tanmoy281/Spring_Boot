@@ -8,6 +8,10 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 @SpringBootApplication(scanBasePackages={"com.tanmoy"})
 
+//instead of above line , you can also use below two lines(older)
+/*@ComponentScan(basePackages={"com.tanmoy"})
+@EnableAutoConfiguration*/
+
 public class SpringBootWebApplication extends SpringBootServletInitializer{
 
 	@Override
