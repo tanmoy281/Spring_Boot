@@ -4,12 +4,13 @@
   <artifactId>SpringRestHelloWorldWeb</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-  <packaging>jar</packaging>
+  <!-- <packaging>jar</packaging> -->
+  <packaging>war</packaging>
   
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.1.4.RELEASE</version>
+		<version>1.5.3.RELEASE</version>
 		<relativePath/>
 	</parent>
 	
@@ -19,6 +20,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		
+		<!-- marked the embedded servlet container as provided (to create deployable war)-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 	
 	</dependencies>
   
@@ -27,8 +35,23 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				
+				<!--  <configuration>
+                	<mainClass>com.tanmoy.config.Application</mainClass>
+            	</configuration>  --><!-- this is an alternative to properties <start-class> approach. -->
+            	
+            	
+				
 			</plugin>
 		</plugins>
 	</build>
+	
+	<properties>
+		<!-- The main class to start by executing java -jar -->
+		<start-class>com.tanmoy.config.Application</start-class>
+		<!-- <tomcat.version>8.5.14</tomcat.version> -->
+		<maven.compiler.source>1.8</maven.compiler.source>
+    	<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
   
 </project>
