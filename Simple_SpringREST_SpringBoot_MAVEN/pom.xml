@@ -19,6 +19,22 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			
+			<!-- to exclude default logging -->
+			<exclusions>
+		        <exclusion>
+		            <groupId>org.springframework.boot</groupId>
+		            <artifactId>spring-boot-starter-logging</artifactId>
+		        </exclusion>
+		    </exclusions>
+		    
+		</dependency>
+		
+		<!-- to add log4j logging -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-log4j</artifactId>
+		    <version>1.2.5.RELEASE</version>
 		</dependency>
 		
 		<!-- marked the embedded servlet container as provided (to create deployable war)-->
@@ -28,9 +44,17 @@
 			<scope>provided</scope>
 		</dependency>
 		
+		<!-- to add spring boot actuator -->
 		<dependency>
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		
+		<!-- to enable hot swapping -->
+		<dependency>
+		     <groupId>org.springframework.boot</groupId>
+		     <artifactId>spring-boot-devtools</artifactId>
+		     <optional>true</optional>
 		</dependency>
 	
 	</dependencies>
@@ -44,9 +68,7 @@
 				<!--  <configuration>
                 	<mainClass>com.tanmoy.config.Application</mainClass>
             	</configuration>  --><!-- this is an alternative to properties <start-class> approach. -->
-            	
-            	
-				
+	
 			</plugin>
 		</plugins>
 	</build>
