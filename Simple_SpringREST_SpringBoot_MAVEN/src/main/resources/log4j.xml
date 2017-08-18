@@ -3,6 +3,7 @@
 <log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/' >
 
 	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+	    <param name="target" value="System.out"/> <!-- default value is System.out, we can change it to System.err -->
 	    <layout class="org.apache.log4j.PatternLayout">
 		<param name="ConversionPattern"
 		  value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
@@ -51,5 +52,15 @@
 		<appender-ref ref="console" />
 		<appender-ref ref="fileappender" />
 	</root>
+
+	<!--
+	If you deploy the application war file on tomcat then you have to pass a JVM arguments to the tomcat JVM.
+	To do so go to tomcat bin folder and open Tomcat8w.exe.
+	now go to java tab and inside java options textarea add this : -Dlog=D:\Program Files\Tomcat 8.0\logs .
+	now start tomcat and all log files will be automatically generated.
+	
+	If you run this app under spring boot then you have to set jvm argument by yourproject -> run as ->run configurations
+	-> Arguments -> vm arguments -> add -Dlog="D:\Program Files\Tomcat 8.0\logs" 
+	-->
 
 </log4j:configuration>
