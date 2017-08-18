@@ -60,7 +60,8 @@
 	now start tomcat and all log files will be automatically generated.
 	
 	If you run this app under spring boot then you have to set jvm argument by yourproject -> run as ->run configurations
-	-> Arguments -> vm arguments -> add -Dlog="D:\Program Files\Tomcat 8.0\logs" 
+	-> Arguments -> vm arguments -> add -Dlog="D:\Program Files\Tomcat 8.0\logs"  .
+	now run the app and all log files will be automatically generated.
 	-->
 
 </log4j:configuration>
