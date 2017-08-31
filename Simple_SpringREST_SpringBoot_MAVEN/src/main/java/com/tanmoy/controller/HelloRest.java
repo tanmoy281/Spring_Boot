@@ -13,8 +13,11 @@ public class HelloRest {
 	
 	@RequestMapping(value="/greeting", method=RequestMethod.GET, produces="application/json")
 	public Employee ping(){
-		log.info("Logger enabled: Entering rest method \n\n");
+		log.info("Logger enabled: Entering rest method\n");
 		Employee e =new Employee();
+		
+		log.warn("Logger enabled: Use this only for warn logging");
+		log.error("Logger enabled: Use this only for error logging");
 		
 		e.setName("Tanmoy");
 		e.setAddress("Hyderabad");
