@@ -14,3 +14,5 @@ Once sqljdbc jar in installed into local maven repository, build all the project
 mvn clean install
 
 Once build is successful, import all the projects into eclipse IDE and start further developement.
+
+[Note: Before adding a new project into this github repository, run mvn eclipse:eclipse command to make it eclipse compatible(it adds java buid path entries into .classpath file)]
