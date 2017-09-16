@@ -16,7 +16,10 @@
 	</parent>
 	
     <modules>
-        <module>Simple_SpringREST_SpringBoot_MAVEN</module>
+        
+		<module>RepositoryContract</module>
+		<module>RepositoryService</module>
+		<module>Simple_SpringREST_SpringBoot_MAVEN</module>
     </modules>
 
 </project>

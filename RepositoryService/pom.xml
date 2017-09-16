@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.tanmoy</groupId>
+  <artifactId>RepositoryService</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+	<parent>
+		<groupId>simplespringbootapp</groupId>
+		<artifactId>multi-module</artifactId>
+		<version>0.1.0</version>
+	</parent>
+	
+	<dependencies>
+	
+	<!-- This will provide hibernate, spring orm etc. -->
+	<dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+       <!--  <exclusions>
+            <exclusion>
+                    <groupId>org.apache.tomcat</groupId>
+                    <artifactId>tomcat-jdbc</artifactId>
+             </exclusion>
+       </exclusions> -->
+    </dependency>
+    
+    <!-- SQL SERVER -->
+   <dependency>
+	    <groupId>com.microsoft.sqlserver</groupId>
+	    <artifactId>sqljdbc4</artifactId>
+	    <version>4.0</version>
+	</dependency>
+	
+	<dependency>
+	        <groupId>com.tanmoy</groupId>
+	        <artifactId>RepositoryContract</artifactId>
+	        <version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	
+	</dependencies>
+  
+</project>

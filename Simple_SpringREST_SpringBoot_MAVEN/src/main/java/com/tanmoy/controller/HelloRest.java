@@ -5,10 +5,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.tanmoy.employee.service.SimpleService;
+
 @RestController
 @RequestMapping("/simaple")
 public class HelloRest {
 
+	SimpleService employeeService;
+	
 	private static Logger log = Logger.getLogger(HelloRest.class);
 	
 	@RequestMapping(value="/greeting", method=RequestMethod.GET, produces="application/json")
@@ -24,6 +28,21 @@ public class HelloRest {
 		
 		log.info("Logger enabled: Exiting rest method");
 		
+		return e;
+	}
+	
+	@RequestMapping(value="/checkhibernate", method=RequestMethod.GET, produces="application/json")
+	public Employee hibernatePing(){
+		log.info("Logger enabled: Entering hibernatePing method\n");
+		Employee e =new Employee();
+		
+		
+		
+		e.setName("Tanmoy");
+		e.setAddress("Hyderabad");
+		
+		log.info("Logger enabled: Exiting hibernatePing method");
+		employeeService.insertEmp();
 		return e;
 	}
 }
