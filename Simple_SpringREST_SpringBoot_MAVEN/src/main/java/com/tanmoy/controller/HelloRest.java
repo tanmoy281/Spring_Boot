@@ -1,16 +1,19 @@
 package com.tanmoy.controller;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.tanmoy.employee.dto.Employee;
 import com.tanmoy.employee.service.SimpleService;
 
 @RestController
 @RequestMapping("/simaple")
 public class HelloRest {
 
+	@Autowired
 	SimpleService employeeService;
 	
 	private static Logger log = Logger.getLogger(HelloRest.class);
@@ -42,7 +45,7 @@ public class HelloRest {
 		e.setAddress("Hyderabad");
 		
 		log.info("Logger enabled: Exiting hibernatePing method");
-		employeeService.insertEmp();
+		employeeService.insertEmp(e);
 		return e;
 	}
 }

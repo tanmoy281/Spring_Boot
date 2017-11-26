@@ -56,11 +56,14 @@
 	<!--
 	If you deploy the application war file on tomcat then you have to pass a JVM arguments to the tomcat JVM.
 	To do so go to tomcat bin folder and open Tomcat8w.exe.
-	now go to java tab and inside java options textarea add this : -Dlog=D:\Program Files\Tomcat 8.0\logs .
-	now start tomcat and all log files will be automatically generated.
+	now go to java tab and inside java options textarea add this : -Dlog="D:\Program Files\Tomcat 8.0\logs" <any_location>.
+	now start tomcat and all log files will be automatically generated. [there are other options available to pass vm arguments in tomcat, see below]
+	
+	add the below line in tomcat\bin\catalina.bat file
+	set CATALINA_OPTS="-Dlog=D:\anyfolder\anysubfolder"
 	
 	If you run this app under spring boot then you have to set jvm argument by yourproject -> run as ->run configurations
-	-> Arguments -> vm arguments -> add -Dlog="D:\Program Files\Tomcat 8.0\logs"  .
+	-> Arguments -> vm arguments -> add -Dlog="D:\Program Files\Tomcat 8.0\logs"   .
 	now run the app and all log files will be automatically generated.
 	-->
 
