@@ -11,7 +11,7 @@ First of all install maven setup on the system.
 
 ~~mvn install:install-file -Dfile=sqljdbc4-4.0.jar -DgroupId=com.micosoft.sqlserver -DartifactId=sqljdbc4 -Dversion=4.0 -Dpackaging=jar~~
 
-sqljdbc jar is now available in maven central repository, so no need to install it into local maven repository.
+sqljdbc jar is now available in maven central repository, so no need to install it into local maven repository manuallly.
 
 Build all the projects from /Spring_Boot directory by running the below command:
 
