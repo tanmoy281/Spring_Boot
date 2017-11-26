@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/tanmoy281/Spring_Boot.svg?branch=master)](https://travis-ci.org/tanmoy281/Spring_Boot)
 
-First of all install maven setup on the system.
+First of all install maven setup in your system.
 
 ~~Before building the projects, install sqljdbc jar file into local maven repository, as this artifact is not available in maven central repositories.~~
 
