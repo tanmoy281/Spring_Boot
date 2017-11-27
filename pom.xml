@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>simplespringbootapp</groupId>
@@ -14,12 +13,30 @@
 		<version>1.5.3.RELEASE</version>
 		<relativePath/>
 	</parent>
+	<!--One reason to use a parent tag is that you have a central place to store information about versions of artifacts, compiler-settings etc. that should be used in all modules.-->
+	
+	<dependencies>
+		<!-- these dependencies will be availabe to all child projects, no need to specify these in child pom -->
+		<!-- to add log4j logging -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-log4j</artifactId>
+		    <version>1.2.5.RELEASE</version>
+		</dependency>
+	</dependencies>
+	
+	<dependencyManagement>
+		<!-- these dependencies will be availabe to all child projects if you specify these in child pom. no need to specify version and/or scope -->
+		<!-- scope tag should be there ,and value will be import   -->
+	</dependencyManagement>
 	
     <modules>
         
 		<module>RepositoryContract</module>
 		<module>RepositoryService</module>
+		<module>RestServiceModule</module>
 		<module>Simple_SpringREST_SpringBoot_MAVEN</module>
-    </modules>
+		
+  </modules>
 
 </project>

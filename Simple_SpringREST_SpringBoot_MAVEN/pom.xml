@@ -16,27 +16,8 @@
 	</parent>
 	
 	<dependencies>
-	
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-			
-			<!-- to exclude default logging -->
-			<exclusions>
-		        <exclusion>
-		            <groupId>org.springframework.boot</groupId>
-		            <artifactId>spring-boot-starter-logging</artifactId>
-		        </exclusion>
-		    </exclusions>
-		    
-		</dependency>
 		
-		<!-- to add log4j logging -->
-		<dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-log4j</artifactId>
-		    <version>1.2.5.RELEASE</version>
-		</dependency>
+		
 		
 		<!-- marked the embedded servlet container as provided (to create deployable war)-->
 		<dependency>
@@ -68,6 +49,11 @@
 	        <groupId>com.tanmoy</groupId>
 	        <artifactId>RepositoryService</artifactId>
 	        <version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+	        <groupId>com.tanmoy</groupId>
+	        <artifactId>RestServiceModule</artifactId>
+	        <version>1.0-SNAPSHOT</version>
 		</dependency>
 	
 	</dependencies>
