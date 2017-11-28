@@ -21,4 +21,10 @@ Once build is successful, import all the projects into eclipse IDE and start fur
 
 ~~[Note: Before adding a new project into this github repository, run mvn eclipse:eclipse command to make it eclipse compatible(it adds java buid path entries into .classpath file)]~~
 
+The below arguments need to pass to the the jvm before running the application
+
+
+-Dlog=<any_location>.  --this is the location where log4j log files will be generated.
+
+
 Read comments of log4j.xml and application.properties for further information about deployment and running the app.
