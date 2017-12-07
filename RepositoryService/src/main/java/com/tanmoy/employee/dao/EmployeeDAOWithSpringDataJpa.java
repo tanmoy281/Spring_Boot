@@ -4,7 +4,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.tanmoy.employee.domain.Employee;
 
-public interface EmployeeDAO extends CrudRepository<Employee, Long>{
+public interface EmployeeDAOWithSpringDataJpa extends CrudRepository<Employee, Long>{
 }
 
 /*you don't need to implement manually, This implementation is plugged in by Spring data automatically at runtime*/

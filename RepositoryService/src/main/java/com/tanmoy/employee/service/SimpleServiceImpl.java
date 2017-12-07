@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.tanmoy.employee.dao.EmployeeDAO;
+import com.tanmoy.employee.dao.EmployeeDAOWithSpringDataJpa;
 import com.tanmoy.employee.dao.EmployeeDaoWithSpringORM;
 import com.tanmoy.employee.domain.Employee;
 import com.tanmoy.employee.domain.EmployeeDetails;
@@ -14,7 +14,7 @@ import com.tanmoy.employee.domain.EmployeeDetails;
 public class SimpleServiceImpl implements SimpleService {
 
 	@Autowired
-	EmployeeDAO dao;
+	EmployeeDAOWithSpringDataJpa dao;
 	
 	@Autowired
 	EmployeeDaoWithSpringORM employeeDaoWithSpringORM;
