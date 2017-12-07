@@ -1,6 +1,8 @@
-package com.tanmoy.employee.dto;
+package com.tanmoy.employee.domain;
 
 import javax.persistence.*;
+
+/* This entity is used to explain Spring Data*/
 
 @Entity
 public class Employee {

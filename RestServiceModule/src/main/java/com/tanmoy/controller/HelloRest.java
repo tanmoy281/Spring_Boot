@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tanmoy.employee.dto.Employee;
+import com.tanmoy.employee.domain.Employee;
+import com.tanmoy.employee.domain.EmployeeDetails;
 import com.tanmoy.employee.service.SimpleService;
 
 @RestController
@@ -45,7 +46,22 @@ public class HelloRest {
 		e.setAddress("Hyderabad");
 		
 		log.info("Logger enabled: Exiting hibernatePing method");
-		employeeService.insertEmp(e);
+		employeeService.insertEmpWithSpringDataJpa(e);
+		return e;
+	}
+	
+	@RequestMapping(value="/checkhibernateorm", method=RequestMethod.GET, produces="application/json")
+	public EmployeeDetails hibernateORMPing(){
+		log.info("Logger enabled: Entering hibernateORMPing method\n");
+		EmployeeDetails e =new EmployeeDetails();
+		
+		
+		
+		e.setFirstName("Tanmoy");
+		e.setLastName("Banerjee");
+		
+		log.info("Logger enabled: Exiting hibernateORMPing method");
+		employeeService.insertEmpWithSpringORM(e);
 		return e;
 	}
 }
