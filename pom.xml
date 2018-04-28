@@ -41,4 +41,7 @@
   <!-- Maven does not take the module building order from what we define in the parent pom.xml. Maven decides the order by considering module dependencies with each other modules.   -->
   <!-- If there is no dependency between modules, then maven will use what ever order we define in parent pom -->
 
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
 </project>

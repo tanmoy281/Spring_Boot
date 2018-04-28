@@ -78,8 +78,8 @@
 		<!-- The main class to start by executing java -jar command or by executing from eclipse IDE-->
 		<start-class>com.tanmoy.config.Application</start-class>
 		<!-- <tomcat.version>8.5.14</tomcat.version> -->
-		<maven.compiler.source>1.8</maven.compiler.source>
-    	<maven.compiler.target>1.8</maven.compiler.target>
+		<!-- <maven.compiler.source>1.8</maven.compiler.source> -->
+    	<!--<maven.compiler.target>1.8</maven.compiler.target> -->
 	</properties>
   
 </project>
