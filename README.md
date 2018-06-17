@@ -30,3 +30,5 @@ The below arguments need to pass to the the jvm before running the application
 Read comments of log4j.xml and application.properties for further information about deployment and running the app.
 
 everytime you add entries to the parent pom file, you need to update all project by -->select all projects in eclipse-->right click-->maven-->update project.
+
+Install Spring Tool Suite(STS) eclipse plugin for spring boot support and run as --> Spring boot app.
