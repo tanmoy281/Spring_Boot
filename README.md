@@ -33,4 +33,4 @@ everytime you add entries to the parent pom file, you need to update all project
 
 Install Spring Tool Suite(STS) eclipse plugin for spring boot support and run as --> Spring boot app.
 
-maven command to see dependency tree mvn dependency:tree
+maven command to see dependency tree, mvn dependency:tree
