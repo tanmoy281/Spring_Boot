@@ -32,3 +32,5 @@ Read comments of log4j.xml and application.properties for further information ab
 everytime you add entries to the parent pom file, you need to update all project by -->select all projects in eclipse-->right click-->maven-->update project.
 
 Install Spring Tool Suite(STS) eclipse plugin for spring boot support and run as --> Spring boot app.
+
+maven command to see dependency tree mvn dependency:tree
